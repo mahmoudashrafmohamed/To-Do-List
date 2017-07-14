@@ -15,7 +15,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddTaskActivity"></activity>
+        <activity
+            android:name=".AddTaskActivity"
+            android:label="@string/add_task_activity_name"></activity>
+
+        <!-- 3 - Register the TaskContentProvider -->
+        <!-- 4 - Set name, authorities, and exported attributes -->
+        <!-- exported = false limits access to this ContentProvider to only this app -->
+        <provider
+            android:name="com.mahmoud_ashraf.to_do_list.data.TaskContentProvider"
+            android:authorities="com.mahmoud_ashraf.to_do_list"
+            android:exported="false" />
     </application>
 
 </manifest>
